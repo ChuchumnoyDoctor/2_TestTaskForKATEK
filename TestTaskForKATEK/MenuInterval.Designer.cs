@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.groupBoxSettingsBD = new System.Windows.Forms.GroupBox();
+            this.labelPathToFile = new System.Windows.Forms.Label();
+            this.labelTextPath = new System.Windows.Forms.Label();
+            this.buttonChooseDT = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelSettings = new System.Windows.Forms.Panel();
             this.panelDataTime = new System.Windows.Forms.Panel();
             this.labelDataStart = new System.Windows.Forms.Label();
             this.dateTimePickerDataStart = new System.Windows.Forms.DateTimePicker();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonViborka = new System.Windows.Forms.Button();
             this.labelDataEnd = new System.Windows.Forms.Label();
             this.dateTimePickerDataEnd = new System.Windows.Forms.DateTimePicker();
             this.tabControlSettings = new System.Windows.Forms.TabControl();
             this.tabPageTableToDB = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonSetToBD = new System.Windows.Forms.Button();
+            this.buttonGetDocument = new System.Windows.Forms.Button();
             this.tabPageFromBDToView = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.buttonGetFromBD = new System.Windows.Forms.Button();
+            this.groupBoxSettingsBD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelSettings.SuspendLayout();
             this.panelDataTime.SuspendLayout();
@@ -55,45 +55,46 @@
             this.tabPageFromBDToView.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBoxSettingsBD
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 386);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(679, 65);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Настройка БД";
+            this.groupBoxSettingsBD.Controls.Add(this.labelPathToFile);
+            this.groupBoxSettingsBD.Controls.Add(this.labelTextPath);
+            this.groupBoxSettingsBD.Controls.Add(this.buttonChooseDT);
+            this.groupBoxSettingsBD.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBoxSettingsBD.Location = new System.Drawing.Point(0, 386);
+            this.groupBoxSettingsBD.Name = "groupBoxSettingsBD";
+            this.groupBoxSettingsBD.Size = new System.Drawing.Size(679, 65);
+            this.groupBoxSettingsBD.TabIndex = 1;
+            this.groupBoxSettingsBD.TabStop = false;
+            this.groupBoxSettingsBD.Text = "Настройка БД";
             // 
-            // label2
+            // labelPathToFile
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(272, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.labelPathToFile.AutoSize = true;
+            this.labelPathToFile.Location = new System.Drawing.Point(182, 41);
+            this.labelPathToFile.Name = "labelPathToFile";
+            this.labelPathToFile.Size = new System.Drawing.Size(210, 19);
+            this.labelPathToFile.TabIndex = 2;
+            this.labelPathToFile.Text = "Здесь должен быть путь к БД.";
             // 
-            // label1
+            // labelTextPath
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(188, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Путь к БД:";
+            this.labelTextPath.AutoSize = true;
+            this.labelTextPath.Location = new System.Drawing.Point(182, 22);
+            this.labelTextPath.Name = "labelTextPath";
+            this.labelTextPath.Size = new System.Drawing.Size(78, 19);
+            this.labelTextPath.TabIndex = 1;
+            this.labelTextPath.Text = "Путь к БД:";
             // 
-            // button1
+            // buttonChooseDT
             // 
-            this.button1.Location = new System.Drawing.Point(6, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Выбрать базу данных";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonChooseDT.Location = new System.Drawing.Point(6, 25);
+            this.buttonChooseDT.Name = "buttonChooseDT";
+            this.buttonChooseDT.Size = new System.Drawing.Size(170, 35);
+            this.buttonChooseDT.TabIndex = 0;
+            this.buttonChooseDT.Text = "Выбрать базу данных";
+            this.buttonChooseDT.UseVisualStyleBackColor = true;
+            this.buttonChooseDT.Click += new System.EventHandler(this.buttonChooseDT_Click);
             // 
             // dataGridView1
             // 
@@ -118,7 +119,7 @@
             // 
             this.panelDataTime.Controls.Add(this.labelDataStart);
             this.panelDataTime.Controls.Add(this.dateTimePickerDataStart);
-            this.panelDataTime.Controls.Add(this.button3);
+            this.panelDataTime.Controls.Add(this.buttonViborka);
             this.panelDataTime.Controls.Add(this.labelDataEnd);
             this.panelDataTime.Controls.Add(this.dateTimePickerDataEnd);
             this.panelDataTime.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -145,15 +146,16 @@
             this.dateTimePickerDataStart.Size = new System.Drawing.Size(200, 26);
             this.dateTimePickerDataStart.TabIndex = 8;
             // 
-            // button3
+            // buttonViborka
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(499, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(170, 35);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Отобразить выборку";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonViborka.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonViborka.Location = new System.Drawing.Point(499, 6);
+            this.buttonViborka.Name = "buttonViborka";
+            this.buttonViborka.Size = new System.Drawing.Size(170, 35);
+            this.buttonViborka.TabIndex = 0;
+            this.buttonViborka.Text = "Отобразить выборку";
+            this.buttonViborka.UseVisualStyleBackColor = true;
+            this.buttonViborka.Click += new System.EventHandler(this.buttonViborka_Click);
             // 
             // labelDataEnd
             // 
@@ -186,8 +188,8 @@
             // 
             // tabPageTableToDB
             // 
-            this.tabPageTableToDB.Controls.Add(this.button4);
-            this.tabPageTableToDB.Controls.Add(this.button2);
+            this.tabPageTableToDB.Controls.Add(this.buttonSetToBD);
+            this.tabPageTableToDB.Controls.Add(this.buttonGetDocument);
             this.tabPageTableToDB.Location = new System.Drawing.Point(4, 28);
             this.tabPageTableToDB.Name = "tabPageTableToDB";
             this.tabPageTableToDB.Padding = new System.Windows.Forms.Padding(3);
@@ -196,27 +198,29 @@
             this.tabPageTableToDB.Text = "Загрузка из таблицы в БД";
             this.tabPageTableToDB.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonSetToBD
             // 
-            this.button4.Location = new System.Drawing.Point(495, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 59);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Сохранить в БД";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonSetToBD.Location = new System.Drawing.Point(495, 6);
+            this.buttonSetToBD.Name = "buttonSetToBD";
+            this.buttonSetToBD.Size = new System.Drawing.Size(170, 59);
+            this.buttonSetToBD.TabIndex = 1;
+            this.buttonSetToBD.Text = "Сохранить в БД";
+            this.buttonSetToBD.UseVisualStyleBackColor = true;
+            this.buttonSetToBD.Click += new System.EventHandler(this.buttonSetToBD_Click);
             // 
-            // button2
+            // buttonGetDocument
             // 
-            this.button2.Location = new System.Drawing.Point(6, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 59);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Выбрать документ для загрузки";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonGetDocument.Location = new System.Drawing.Point(6, 6);
+            this.buttonGetDocument.Name = "buttonGetDocument";
+            this.buttonGetDocument.Size = new System.Drawing.Size(170, 59);
+            this.buttonGetDocument.TabIndex = 1;
+            this.buttonGetDocument.Text = "Выбрать документ для загрузки";
+            this.buttonGetDocument.UseVisualStyleBackColor = true;
+            this.buttonGetDocument.Click += new System.EventHandler(this.buttonGetDocument_Click);
             // 
             // tabPageFromBDToView
             // 
-            this.tabPageFromBDToView.Controls.Add(this.button5);
+            this.tabPageFromBDToView.Controls.Add(this.buttonGetFromBD);
             this.tabPageFromBDToView.Location = new System.Drawing.Point(4, 28);
             this.tabPageFromBDToView.Name = "tabPageFromBDToView";
             this.tabPageFromBDToView.Padding = new System.Windows.Forms.Padding(3);
@@ -225,14 +229,15 @@
             this.tabPageFromBDToView.Text = "Загрузка из БД";
             this.tabPageFromBDToView.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // buttonGetFromBD
             // 
-            this.button5.Location = new System.Drawing.Point(6, 6);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(170, 59);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Показать загруженные документы";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonGetFromBD.Location = new System.Drawing.Point(6, 6);
+            this.buttonGetFromBD.Name = "buttonGetFromBD";
+            this.buttonGetFromBD.Size = new System.Drawing.Size(170, 59);
+            this.buttonGetFromBD.TabIndex = 2;
+            this.buttonGetFromBD.Text = "Показать загруженные документы";
+            this.buttonGetFromBD.UseVisualStyleBackColor = true;
+            this.buttonGetFromBD.Click += new System.EventHandler(this.buttonGetFromBD_Click);
             // 
             // MenuInterval
             // 
@@ -242,13 +247,13 @@
             this.ClientSize = new System.Drawing.Size(679, 451);
             this.Controls.Add(this.panelSettings);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxSettingsBD);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuInterval";
             this.Text = "Отображение в интервале времени";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxSettingsBD.ResumeLayout(false);
+            this.groupBoxSettingsBD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelSettings.ResumeLayout(false);
             this.panelDataTime.ResumeLayout(false);
@@ -261,24 +266,24 @@
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBoxSettingsBD;
+        private System.Windows.Forms.Label labelPathToFile;
+        private System.Windows.Forms.Label labelTextPath;
+        private System.Windows.Forms.Button buttonChooseDT;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panelSettings;
         private System.Windows.Forms.Panel panelDataTime;
         private System.Windows.Forms.Label labelDataStart;
         private System.Windows.Forms.DateTimePicker dateTimePickerDataStart;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonViborka;
         private System.Windows.Forms.Label labelDataEnd;
         private System.Windows.Forms.DateTimePicker dateTimePickerDataEnd;
         private System.Windows.Forms.TabControl tabControlSettings;
         private System.Windows.Forms.TabPage tabPageTableToDB;
         private System.Windows.Forms.TabPage tabPageFromBDToView;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonSetToBD;
+        private System.Windows.Forms.Button buttonGetDocument;
+        private System.Windows.Forms.Button buttonGetFromBD;
     }
 }
 
