@@ -45,6 +45,7 @@
             this.buttonSetToBD = new System.Windows.Forms.Button();
             this.buttonGetDocument = new System.Windows.Forms.Button();
             this.tabPageFromBDToView = new System.Windows.Forms.TabPage();
+            this.buttonGetFromBDByInterval = new System.Windows.Forms.Button();
             this.buttonGetFromBD = new System.Windows.Forms.Button();
             this.groupBoxSettingsBD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,18 +74,17 @@
             this.labelPathToFile.AutoSize = true;
             this.labelPathToFile.Location = new System.Drawing.Point(182, 41);
             this.labelPathToFile.Name = "labelPathToFile";
-            this.labelPathToFile.Size = new System.Drawing.Size(210, 19);
+            this.labelPathToFile.Size = new System.Drawing.Size(0, 19);
             this.labelPathToFile.TabIndex = 2;
-            this.labelPathToFile.Text = "Здесь должен быть путь к БД.";
             // 
             // labelTextPath
             // 
             this.labelTextPath.AutoSize = true;
             this.labelTextPath.Location = new System.Drawing.Point(182, 22);
             this.labelTextPath.Name = "labelTextPath";
-            this.labelTextPath.Size = new System.Drawing.Size(78, 19);
+            this.labelTextPath.Size = new System.Drawing.Size(111, 19);
             this.labelTextPath.TabIndex = 1;
-            this.labelTextPath.Text = "Путь к БД:";
+            this.labelTextPath.Text = "Выбранная БД:";
             // 
             // buttonChooseDT
             // 
@@ -139,7 +139,7 @@
             // 
             // dateTimePickerDataStart
             // 
-            this.dateTimePickerDataStart.CustomFormat = "dd:MM:yyyy HH:mm:ss";
+            this.dateTimePickerDataStart.CustomFormat = "dd.MM.yyyy HH:mm:ss";
             this.dateTimePickerDataStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerDataStart.Location = new System.Drawing.Point(47, 12);
             this.dateTimePickerDataStart.Name = "dateTimePickerDataStart";
@@ -168,7 +168,7 @@
             // 
             // dateTimePickerDataEnd
             // 
-            this.dateTimePickerDataEnd.CustomFormat = "dd:MM:yyyy HH:mm:ss";
+            this.dateTimePickerDataEnd.CustomFormat = "dd.MM.yyyy HH:mm:ss";
             this.dateTimePickerDataEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerDataEnd.Location = new System.Drawing.Point(290, 12);
             this.dateTimePickerDataEnd.Name = "dateTimePickerDataEnd";
@@ -220,6 +220,7 @@
             // 
             // tabPageFromBDToView
             // 
+            this.tabPageFromBDToView.Controls.Add(this.buttonGetFromBDByInterval);
             this.tabPageFromBDToView.Controls.Add(this.buttonGetFromBD);
             this.tabPageFromBDToView.Location = new System.Drawing.Point(4, 28);
             this.tabPageFromBDToView.Name = "tabPageFromBDToView";
@@ -228,6 +229,16 @@
             this.tabPageFromBDToView.TabIndex = 1;
             this.tabPageFromBDToView.Text = "Загрузка из БД";
             this.tabPageFromBDToView.UseVisualStyleBackColor = true;
+            // 
+            // buttonGetFromBDByInterval
+            // 
+            this.buttonGetFromBDByInterval.Location = new System.Drawing.Point(425, 6);
+            this.buttonGetFromBDByInterval.Name = "buttonGetFromBDByInterval";
+            this.buttonGetFromBDByInterval.Size = new System.Drawing.Size(243, 59);
+            this.buttonGetFromBDByInterval.TabIndex = 2;
+            this.buttonGetFromBDByInterval.Text = "Показать данные всех документов с учетом интервала";
+            this.buttonGetFromBDByInterval.UseVisualStyleBackColor = true;
+            this.buttonGetFromBDByInterval.Click += new System.EventHandler(this.buttonGetFromBDByInterval_Click);
             // 
             // buttonGetFromBD
             // 
@@ -249,8 +260,11 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBoxSettingsBD);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(695, 490);
             this.Name = "MenuInterval";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Отображение в интервале времени";
             this.groupBoxSettingsBD.ResumeLayout(false);
             this.groupBoxSettingsBD.PerformLayout();
@@ -284,6 +298,7 @@
         private System.Windows.Forms.Button buttonSetToBD;
         private System.Windows.Forms.Button buttonGetDocument;
         private System.Windows.Forms.Button buttonGetFromBD;
+        private System.Windows.Forms.Button buttonGetFromBDByInterval;
     }
 }
 
